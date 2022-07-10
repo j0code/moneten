@@ -1,0 +1,5 @@
+scoreboard players operation @s moneten_bank -= @s transfer
+scoreboard players operation @a[tag=moneten_target,limit=1] moneten_bank += @s transfer
+
+tellraw @s [{"text":"[","color":"gray"},{"text":"Moneten","color":"gold","hoverEvent":{"action":"show_text","value":"\u00a76Minecraft Moneten\n\u00a7a[✔] \u00a7cMr. Krabs \u00a7aapproved"}},{"text":"]","color":"gray"}," ",{"text":"Transferred","color":"gray"}," ",{"score":{"objective":"transfer","name":"@s"},"color":"green"}," ",{"text":"Moneten","color":"green"}," ",{"text":"to","color":"gray"}," ",{"selector":"@a[tag=moneten_target,limit=1]","color":"yellow"}]
+tellraw @a[tag=moneten_target,limit=1] [{"text":"[","color":"gray"},{"text":"Moneten","color":"gold","hoverEvent":{"action":"show_text","value":"\u00a76Minecraft Moneten\n\u00a7a[✔] \u00a7cMr. Krabs \u00a7aapproved"}},{"text":"]","color":"gray"}," ",{"selector":"@s","color":"yellow"}," ",{"text":"transferred","color":"gray"}," ",{"score":{"objective":"transfer","name":"@s"},"color":"green"}," ",{"text":"Moneten","color":"green"}," ",{"text":"to you.","color":"gray"}]

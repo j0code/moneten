@@ -1,0 +1,5 @@
+scoreboard players operation @s moneten_bank -= @s pay
+scoreboard players operation @p[distance=0.0001..5] moneten_bank += @s pay
+
+tellraw @s [{"text":"[","color":"gray"},{"text":"Moneten","color":"gold","hoverEvent":{"action":"show_text","value":"\u00a76Minecraft Moneten\n\u00a7a[✔] \u00a7cMr. Krabs \u00a7aapproved"}},{"text":"]","color":"gray"}," ",{"text":"Paid","color":"gray"}," ",{"score":{"objective":"pay","name":"@s"},"color":"green"}," ",{"text":"Moneten","color":"green"}," ",{"text":"to","color":"gray"}," ",{"selector":"@p[distance=0.0001..5]","color":"yellow"}]
+tellraw @p[distance=0.0001..5] [{"text":"[","color":"gray"},{"text":"Moneten","color":"gold","hoverEvent":{"action":"show_text","value":"\u00a76Minecraft Moneten\n\u00a7a[✔] \u00a7cMr. Krabs \u00a7aapproved"}},{"text":"]","color":"gray"}," ",{"selector":"@s","color":"yellow"}," ",{"text":"paid","color":"gray"}," ",{"score":{"objective":"pay","name":"@s"},"color":"green"}," ",{"text":"Moneten","color":"green"}," ",{"text":"to you.","color":"gray"}]
