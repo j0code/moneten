@@ -1,6 +1,14 @@
 # Calculate money
-execute if data entity @s {SelectedItem:{id:"minecraft:diamond"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 50
-execute if data entity @s {SelectedItem:{id:"minecraft:dragon_egg"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 2000
+execute if data entity @s {SelectedItem:{id:"minecraft:emerald"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 500
+execute if data entity @s {SelectedItem:{id:"minecraft:emerald_block"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 4500
+execute if data entity @s {SelectedItem:{id:"minecraft:experience_bottle"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 800
+execute if data entity @s {SelectedItem:{id:"minecraft:diamond"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 1000
+execute if data entity @s {SelectedItem:{id:"minecraft:diamond_block"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 9000
+execute if data entity @s {SelectedItem:{id:"minecraft:player_head"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 2000
+execute if data entity @s {SelectedItem:{id:"minecraft:echo_shard"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 2500
+execute if data entity @s {SelectedItem:{id:"minecraft:heart_of_the_sea"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 5500
+execute if data entity @s {SelectedItem:{id:"minecraft:nether_star"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 12000
+execute if data entity @s {SelectedItem:{id:"minecraft:dragon_egg"}} store result score @s moneten_buffer run data get entity @s SelectedItem.Count 100000
 
 # Delete item from inv
 execute if score @s moneten_buffer matches 1.. if data entity @s {SelectedItemSlot:0} run item replace entity @s container.0 with minecraft:air
